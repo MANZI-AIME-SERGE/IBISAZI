@@ -1,0 +1,130 @@
+a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 25px;
+    color:black;
+}
+a:hover{
+    color:darkorange
+}
+body{
+    background-color: aqua;
+    text-align: center;
+}
+.not{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: aquamarine;
+    border-radius: 10px;
+    overflow: hidden;
+ }
+ .not::before
+ {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,red,red,red);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+ }
+ .not::after
+ {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,red,red,red);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+ }
+ .borderline{
+   position: absolute;
+   top: 0;
+   inset: 0;
+ } 
+ .borderline::before
+ {
+   content: '';
+   position: absolute;
+   top: -50%;
+   left:-50%;
+   width: 380px;
+   height: 420px;
+   background: linear-gradient(0deg,transparent,
+   transparent,blue,blue,blue);
+   z-index: 1;
+   transform-origin: bottom right;
+   animation: animate 6s linear infinite; 
+   animation-delay: -1.5s;
+ }
+ .borderline::after
+ {
+   content: '';
+   position: absolute;
+   top: -50%;
+   left:-50%;
+   width: 380px;
+   height: 420px;
+   background: linear-gradient(0deg,transparent,
+   transparent,blue,blue,blue);
+   z-index: 1;
+   transform-origin: bottom right;
+   animation: animate 6s linear infinite; 
+   animation-delay: -4.5s;
+ }
+ @keyframes animate
+ {
+    0%{
+       transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+ }
+ .not form
+ {
+position: absolute;
+inset: 5px;
+background: aquamarine;
+
+border-radius: 8px;
+z-index: 2;
+
+ }
+ .not input{
+    margin-top: 40px;
+    height: 40px;
+    width: 190px;
+    border-radius: 10px;
+ }
+
+ label{
+    font-size: 30px;
+    color:chocolate;
+ }
+
+
+ button{
+    background-color: aqua;
+    height:50px;
+    width: 250px;
+    color:white;
+    font-size: 25px;
+    border-radius: 25px;
+    border: 1px;
+    cursor: pointer;
+ }
+ button:hover{
+    color:chocolate;
+ }
